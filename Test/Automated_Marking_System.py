@@ -93,7 +93,7 @@ if __name__ == "__main__":
                     strDet = detect_handwritten_ocr('tempname.png')
                     strDet.split(":") # trying to split and extract "name" using :
                     if (len(strDet) > 1):
-                        if (strDet[0] == "name"):
+                        if (strDet[0] == "Name"):
                             name = strDets[1]
                     else:
                         img_name = "Answers/" + name + "(" + str(incr) + ").png"
