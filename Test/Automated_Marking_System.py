@@ -1,10 +1,17 @@
-
 import cv2
 import os
 import numpy as np
 import imutils
 
 MINAREA = 100
+XBUFFER = 5
+YBUFFER = 5
+FILE_PATH = os.path.dirname(os.path.realpath(__file__))
+# if not os.path.exists(os.path.join(os.getcwd(), "Answers")):
+#     os.makedirs(os.path.join(os.getcwd(), "Answers"))
+
+# if not os.path.exists(os.path.join(os.getcwd(), "TestCases")):
+#     os.makedirs(os.path.join(os.getcwd(), "TestCases"))
 
 class RectDetector:
     def __init__(self):
@@ -23,13 +30,38 @@ class RectDetector:
             (x, y, w, h) = cv2.boundingRect(approx)
             if (w*h > MINAREA):
                 rect = True
+                # print (x, y, w, h)
+                x += XBUFFER
+                w -= 2*XBUFFER
+                y += YBUFFER
+                h -= 2*YBUFFER
 
         return rect, x, y, w, h
+
+def Reformat_Image (ImageFileName, new_size=100):
+    image_folder_path = os.path.join(FILE_PATH, "Answers")
+    ImageFilePath = os.path.join(image_folder_path, ImageFileName)
+    from PIL import Image
+    image = Image.open(ImageFilePath, 'r')
+    image_size = image.size
+    width = image_size[0]
+    height = image_size[1]
+
+    if(width < new_size and height < new_size):
+        background = Image.new('RGBA', (new_size, new_size), (255, 255, 255, 255))
+        offset = (int(round(((new_size - width) / 2), 0)), int(round(((new_size - height) / 2),0)))
+
+        background.paste(image, offset)
+        background.save(os.path.join(image_folder_path, ImageFileName))
+        print("Image has been resized !")
+
+    else:
+        print("Image is bigger than necessary")
 
 if __name__ == "__main__":
     #Get all paths
     homeDir = os.getcwd()
-    os.chdir(homeDir + "\TestCases")
+    os.chdir(os.path.join(homeDir, "TestCases"))
     curDir = os.getcwd()
 
     incr = 0
@@ -59,3 +91,6 @@ if __name__ == "__main__":
                     incr += 1
                     cv2.imwrite(img_name, img[y:y+h, x:x+w])
                     os.chdir(curDir)
+    # Resizing image if too small
+    for image in os.listdir(os.path.join(FILE_PATH, "Answers")):
+        Reformat_Image(image, 150)
