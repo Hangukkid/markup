@@ -2,6 +2,7 @@ import cv2
 import os
 import numpy as np
 import imutils
+from gcloud import detect_handwritten_ocr
 
 MINAREA = 100
 XBUFFER = 5
@@ -82,14 +83,23 @@ if __name__ == "__main__":
             cnts = cnts[0] if imutils.is_cv2() else cnts[1]
             rd = RectDetector()
 
-            
-            for c in cnts:
+            name = ""
+            for c in reversed(cnts):
                 rect, x, y, w, h = rd.detect(c)
                 if (rect):
                     os.chdir(homeDir)
-                    img_name = "Answers/" + str(incr) + "(" + str(y) + ").png"
-                    incr += 1
-                    cv2.imwrite(img_name, img[y:y+h, x:x+w])
+                    img_crop = img[y:y+h, x:x+w]
+                    cv2.imwrite('tempName.png', imgCrop)
+                    strDet = detect_handwritten_ocr('tempname.png')
+                    strDet.split(":") # trying to split and extract "name" using :
+                    if (len(strDet) > 1):
+                        if (strDet[0] == "name"):
+                            name = strDets[1]
+                    else:
+                        img_name = "Answers/" + name + "(" + str(incr) + ").png"
+                        incr += 1
+                        cv2.imwrite(img_name, img_crop)
+
                     os.chdir(curDir)
     # Resizing image if too small
     for image in os.listdir(os.path.join(FILE_PATH, "Answers")):
