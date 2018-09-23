@@ -1,0 +1,139 @@
+Mitochondria	Not Mitochondria
+Mitochondria	mitochondria
+Mitochondria is the power house of the cell	mitochondria
+Mitochondria is not the power house of the cell	Mitochondria is the power house of the cell
+Mitochondria is not the power house of the cell	mitochondria
+Power house of the cell	Mitochondria
+Mitochondria	Ribose
+Chips	Lays chips
+The apple is red and round	the apple is square
+the apple is not red and round	the apple is red and round
+the banana	red and round
+red and round	apple
+red, round	red and round
+round and red	red and round
+round and red	round, red
+red and round	the apple is red and round
+watermelon has a lot of water	water
+watermelon has a lot of water	 watermelon does not have a lot of water
+water is a lot in watermelon	water
+swimming is a sport	swimming is arts
+sport	swimming is a sport
+sport	swimming is arts
+swimming is a type of sports	sports
+tv is bad for your vision	tv is good for your vision
+bad for your vision	tv is bad for your vision
+tv induces bad vision	tv is bad for your vision
+tv induces bad vision	good vision
+summer, fall, winter, spring	fall, spring, winter, summer
+summer, winter, fall, spring	winter, spring, fall, summer
+the four seasons are summer, fall, winter, and spring	summer, fall, winter, spring
+summer fall winter spring	summer, fall, winter, spring
+fall spring summer winter	summer, winter, fall, spring
+fall apple banana fun	summer, winter, fall, spring
+ 	summer, winter fall, spring
+season	summer, winter, fall, spring
+four is	summer, winter, fall, spring
+there are 7 billion people in Canada	there are 8 billion people in Canada
+7 billion	there are 7 billion people in Canada
+7 billion	7 billion people
+there are no people in Canada	7 billion
+7 billion people died in Canada	there are 7 billion people in Canada
+7 billion people were born in Canada	7 billion
+water boils at 100 degrees celsius	at 100 degrees celsius
+100 degrees celsius	at 100 degrees celsius
+100 degrees celsius	100 degree celsius
+100 degrees cells	100 degrees celsius
+100 degrees celsius	100 degrees celsius
+1 degrees celsius	100 degrees celsius
+1 degrees	100 degrees celsius
+degrees	100 degrees celsius
+gas, solid, and liquid	gas, solid, liquid
+gas, solid, liquid	gas, solid, liquid
+the three states of matter are gas, solid, and liquid	gas, solid, liquid
+solid, liquid, gas	gas, solid, liquid
+solid liquid, gas	solid, liquid, gas
+solid, liquid gas	solid, liquid, gas
+solid liquid gas	solid, liquid, gas
+liquid, solid, gas	solid, liquid, gas
+lizards are reptiles	lizards are reptiles
+lizards	lizards are reptiles
+reptiles	lizards are reptiles
+mammals	reptiles
+ 	reptiles
+mammals are reptiles	reptiles
+mammals are reptiles	lizards are reptiles
+lizards are not reptiles	lizards are reptiles
+lizards aren't reptiles	lizards are reptiles
+lizards not reptiles	reptiles
+primary colours are red, yellow, and blue	red, yellow, blue
+primary colours are red, green, blue	red, yellow, blue
+secondary colours are red, yello, and blue	red, yellow, blue
+secondary colours are red, green, blue	red, yellow, blue
+yellow, blue, red	red, yellow, blue
+primary colours are red yellow blue	primary colours are red, yellow, blue
+they are red, blue, and yellow	red, yellow, blue
+they are blue, red, yellow	they are red, blue, yellow
+they are blue red yellow	they are blue, red, yellow
+100 Ohm Resistor	100 ohm resistor
+10 ohm resistor	100 ohm resistor
+10 ohm Resistor	100 ohm resistor
+1000 ohm resistor	100 ohm resistor
+100 ohm capacitor	100 ohm resistor
+100 Ohm resistor	100 ohm resistor
+Canada	North america
+America	North America
+North	North America
+north america	north america
+north america	North america
+The diameter is 5cm	5cm
+diameter is 5cm	5cm
+diameter = 5cm	5cm
+5cm	5cm
+Back in 1964 we lost the war	1964
+Back in we lost the war	1964
+the war	Back in 1964 we lost the war
+Socrates died in 399 BC	399BC
+399BC	399 BC
+died in 399 BC	Socrates died in 399 BC
+He died in 399 BC	Socrates died in 399 BC
+The death of Socrates was in 399 BCE	Socrates died in 399BC
+Socrates died in	Socrates died in 399 BC
+He died in	He died in 399BC
+Socrates was poisoned in 399 BC	He died in 399 BC
+Never blue	blue
+no blue	blue
+hardly blue	blue
+no blue	no blue
+hardly blue	hardly blue
+never blue	Never blue
+none blue	never blue
+no one blue	no blue
+not blue	not blue
+not blue	never blue
+not blue	blue
+never blue	blue
+nowhere blue	blue
+nowhere blue	not blue
+not blue	not white
+not blue	never red
+hardly red	barely red
+hardly red	hardly red
+hardly red	barely blue
+hardly red	hardly blue
+Cheese is dairy	dairy
+Cheese = dairy	dairy
+Cheese =	dairy
+Jennie has money.	Jennie has money
+Jennie has no money	Jennie has money
+Jennie has money	Jennie has no money
+I always go to the gym after work	I rarely go to the gym after work
+My guests are not arriving now.	My guest are not arriving now
+$700	700cm
+100%	100cm
+help me out here	don't help me
+help me	help me
+two fins	fish have two fins
+two fins	two
+fish two	two
+reptiles	reptile
