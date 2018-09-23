@@ -89,7 +89,7 @@ if __name__ == "__main__":
                 if (rect):
                     os.chdir(homeDir)
                     img_crop = img[y:y+h, x:x+w]
-                    cv2.imwrite('tempName.png', imgCrop)
+                    cv2.imwrite('tempName.png', img_crop)
                     strDet = detect_handwritten_ocr('tempname.png')
                     strDet.split(":") # trying to split and extract "name" using :
                     if (len(strDet) > 1):
