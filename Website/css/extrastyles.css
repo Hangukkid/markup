@@ -1,0 +1,16 @@
+#errorText {
+    font-size: 15px;
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+.regularBorder {
+    border: 1px solid #ccc;
+}
+
+.errorBorder {
+    border: 3px solid red;
+}

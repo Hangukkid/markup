@@ -1,0 +1,46 @@
+.container {
+    width: 30%;
+    margin: 0px auto;
+    margin-top: 7%;
+    padding: 20px;
+}
+
+.navbar-item{
+    font-size: 25px;
+}
+
+#toptext{
+    font-size: 25px;
+}
+
+/*#googleSignIn {
+    width: 50%;
+    margin-right: 10%;
+    border-radius: 5px;
+}
+
+#fbSignIn {
+    margin-top: 3%;
+    width: 50%;
+}*/
+
+#socialMediaText {
+    padding-top: 50px;
+    margin-bottom: 3%;
+}
+
+body {
+    background: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+
+button {
+    float: left;
+    width: 40%;
+}
+
+
+#btnLogin{
+    margin-right: 20%;
+}

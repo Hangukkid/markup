@@ -1,0 +1,58 @@
+.navbar-item{
+    font-size: 25px;
+}
+
+body {
+    background: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+}
+
+#topleft {
+    float:left;
+}
+
+#toptext {
+    margin-left: 30px;
+}
+
+button {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 10%;
+    float: right;
+}
+
+#iconTable {
+    clear:both;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+#pastTests{
+    clear:both;
+    margin-left: 7%;
+}
+
+.test{
+    border: 1px solid black;
+    width:30%;
+    height: 20%;
+    margin-bottom: 2%;
+}
+
+.test h1{
+    margin-left: 10px;
+}
+
+.test button{
+    width: 30%;
+}

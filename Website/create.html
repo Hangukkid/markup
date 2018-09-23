@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MarkUp | Create</title>
+    <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+</head>
+
+<body>
+    <script src="js/navbarBurger.js"></script>
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                MarkUp
+            </a>
+            <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+
+            <div class="navbar-start">
+
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item" href="about.html">
+                    About
+                </a>
+                <a class="navbar-item" href="tutorial.html">
+                    Tutorial
+                </a>
+                <a class="navbar-item" href="profile.html">
+                    Profile
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <section>
+        <h1><br><br><br><br><br></h1>
+        <div id="topBar" class="hero-body">
+            <div class="columns">
+                <div id="questionCol" class="column is-half is-offset-one-quarter notification is-info">
+                    <h1 class="title is-size-4 ">Name Your Test</h1>
+                    <h1>Test Name:</h1>
+                    <textarea id='input_title' cols='30' rows='2'></textarea>
+                    <!-- <form id="file-form" action="handler.php" method="POST">
+                        <input type="text" id="file-name" name="name" placeholder="World Name" />
+                        <input type="file" id="file-select" name="world" multiple />
+                        <button type="submit" id="upload-button">Upload</button>
+                    </form>
+                    <br><br> -->
+                    <br><br>
+                    <h1 class="title is-size-4 ">Add Questions</h1>
+                    <div id="questionDiv">
+                        <h1>Question:</h1>
+                        <textarea id='input_question' cols='80' rows='3'></textarea>
+                        <br>
+                        <h1>Choices: (seperate by commas, leave empty if not multiple choice)</h1>
+                        <textarea id='input_choices' cols='80' rows='3'></textarea>
+                        <br>
+                        <h1>Answer: </h1>
+                        <textarea id='input_answer' cols='80' rows='3'></textarea>
+                        <br>
+                    </div>
+                    <button id="btnAddQuestion" type="button">Add Question</button>
+                    <button id="submitbtn" type="button">Done</button>
+
+                    <div>
+                        <br><br>
+                        <h1 class="title is-size-4">Preview:</h1>
+                        <div id="curTest"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/create.js"></script>
+    <!--<script src = 'js/upload.js'></script>-->
+</body>
+
+</html>

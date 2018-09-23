@@ -1,0 +1,14 @@
+a {
+    font-size: 25px;
+    color: white;
+}   
+
+#questionCol{
+    padding: 5%;
+}
+
+textarea {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
