@@ -10,6 +10,11 @@ import string
 stopwords = nltk.corpus.stopwords.words('english')
 # stopwords.extend(string.punctuation)  
 
+try:
+    data = json.loads(open("data.txt", "r").read())
+except:
+    data = {}
+
 def norm(vec):
     sum_of_squares = 0.0  
     for x in vec:
@@ -73,19 +78,19 @@ def find_character_description(sentences, name):
                             if sentences[i][j] in description.keys():
                                 description[sentences[i][j]] += 1
                             else:
-                                description[sentences[i][j]] = 1                 
-
+                                description[sentences[i][j]] = 1    
+                                       
 
     return description
             
-def find_descriptions (sentences):
-    description = {}              
+def find_descriptions (sentences):   
+    global data           
     for i in range (len(sentences)):
         for j in range (len(sentences[i])):
-            if not j in description:
-                description [j] = find_character_description (sentences, j)
+            if not sentences[i][j] in data:        
+                print(i, j) 
+                data [sentences[i][j]] = find_character_description (sentences, sentences[i][j])
 
-    return description
 
 
 def setup_text (exclude=[]):
@@ -94,9 +99,8 @@ def setup_text (exclude=[]):
     
     for book in os.listdir(os.path.join(FILE_PATH, 'books')):
         if book not in exclude:
-            book = open(os.path.join(FILE_PATH, 'books', book), encoding = "latin1")
+            book = open(os.path.join(FILE_PATH, 'books', book), encoding = "utf-8")
             files += ' ' + book.read()
-    
     files = files.lower()
     files = files.replace('!', '.')
     files = files.replace('?', '.')
@@ -146,17 +150,38 @@ def find_character_description_from_files(name):
 
 
 def save_data ():
-    files = setup_text()
-    FILE_PATH = os.path.dirname(os.path.realpath(__file__))
+    global data
+    try:
+        f = json.loads(open("already_done.txt", "r").read())
+    except:
+        f = []
 
+    files = setup_text(f)
+    FILE_PATH = os.path.dirname(os.path.realpath(__file__))
+    
+    find_descriptions (files)
+    
     list_of_books = []
     for book in os.listdir(os.path.join(FILE_PATH, 'books')):
         list_of_books.append(book)
     
-    f = open("demofile.txt", "a")
-    f.write("Now the file has one more line!")
+    f = open("already_done.txt", "w+")
+    f.write(json.dumps(list_of_books))
+
+    output = open("data.txt", "w+")
+    output.write(json.dumps(data))
 
 
+def compare_data (name1, name2):
+    global data
+    if data.get(name1) != None and data.get(name2) != None:
+        print (euclid_norm_similarity(data[name1], data[name2]))
+    else:
+        print ("Sample size too small.")
+
+save_data()
+
+print (data.get("raphtalia"))
 
 # print (euclid_norm_similarity(find_character_description_from_files("kill"), find_character_description_from_files("murder")))
 
